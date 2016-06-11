@@ -17,3 +17,15 @@
 	width: 50%;
 	float: left;
 }
+
+.start-team{
+	padding-top: 100px !important;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float:right;
+}
