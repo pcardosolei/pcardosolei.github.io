@@ -9,6 +9,11 @@
 	height: 10%;
 }
 
-.imageContainer {
+.imageContainer .header{
 	float : left;
+}
+
+.start-header {
+	width: 50%;
+	float: left;
 }
