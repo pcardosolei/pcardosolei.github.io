@@ -5,6 +5,10 @@
   box-shadow: none; }
 
 .wedo-products {
-	width: 50%;
-	height: 50%;
+	width: 10%;
+	height: 10%;
+}
+
+.imageContainer {
+	float : left;
 }
