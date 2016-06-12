@@ -18,8 +18,8 @@
 	float: left;
 }
 
-.start-team{
-	padding-top: 100px !important;
+.margin-top: {
+	margin-top: 100px !important;
 }
 
 .float-left {
@@ -29,3 +29,4 @@
 .float-right {
 	float:right;
 }
+
