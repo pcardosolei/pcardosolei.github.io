@@ -14,14 +14,7 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+
 	</head>
 	<body>
 		<div class="reveal">
@@ -78,7 +71,7 @@
 						<div>
 							<p> 12 países onde possui escritórios </p>
 							<p> Portugal, France , Ireland, Poland, Spain , UK , Brasil, Mexico, Egipto, Malasya , Australia </p>
-							<p> 180+ clientes area telecomunicações </p>
+							<p> 180+ clientes área telecomunicações </p>
 							<p> 550 colaboradores </p>
 						</div>
 					</section>
@@ -179,31 +172,33 @@
 						</div>
 						<div class="margin-top">
 							<div class="float-left">
-								<img class="wedo-products-90" data-src="assets/jira_project.png"/>
+								<img class="logo-size-50" data-src="assets/jira_project.png"/>
 							</div>
 							<div class="float-right">
 								<p class="text-less margin-top-30"> Desenvolvimento de um projeto </p>
-								<p class="text-less margin-top-30"> System requirements / ambito / problemas </p>
+								<p class="text-less margin-top-30"> System requirements / âmbito / problemas </p>
 								<p class="text-less margin-top-30"> Evolução até produto final </p>
 							</div>
 						</div>
 					</section>
 					<section>
 						<h2>Escolha dos projectos</h2>
-						<p>Existência de canal de comunicação para levantamento de sugestões/issues </p>
-						<p>Reuniões para levantar issues e possíveis soluçoes</p>
-						<p>Divisões de issues e orçamento para cada uma das divisões</p>
-						<p>Product Board - decidir o top 5 ou prioridade no backlog </p>
+						<div class="margin-top">
+							<p class="margin-top-30">Canal de comunicação para levantamento de sugestões/problemas </p>
+							<p class="margin-top-30">Reuniões para levantar problemas e possíveis soluçoes</p>
+							<p class="margin-top-30">Divisões de problemas e orçamento para cada uma das divisões</p>
+							<p>Product Board - decidir o top 5 ou prioridade no backlog </p>
+						</div>
 					</section>
 					<section>
 						<h2>Avaliação do Sucesso dos Projetos</h2>
-						<div class="margin-top text-less">
+						<div class="margin-top ">
 							<p> Cumprimento do orçamento </p>
 						</div>
-						<div class="margin-top text-less">
+						<div class="margin-top">
 						<p> Cumprimento das <i>milestones</i></p>
 						</div>
-						<div class="margin-top text-less">
+						<div class="margin-top">
 							<p> Inquéritos de satisfação </p>
 						</div>
 
@@ -260,6 +255,17 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+		</script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+		if( window.location.search.match( /print-pdf/gi ) ) {
+		    var link = document.createElement( 'link' );
+		    link.rel = 'stylesheet';
+		    link.type = 'text/css';
+		    link.href = 'pdf.css';
+		    document.getElementsByTagName( 'head' )[0].appendChild( link );
+		  }
 		</script>
 	</body>
 </html>
