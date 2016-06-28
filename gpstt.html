@@ -7,21 +7,14 @@
 		<title>Gestão de Processo Software</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/league.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
 		<!-- my CSS -->
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+
 	</head>
 	<body>
 		<div class="reveal">
@@ -29,7 +22,8 @@
 				<section>
 					<div class="header">
 						<div class="start-header">
-							<p> Mestrado Integrado em Engenharia Informática</p>
+							<p class="text-less"> Mestrado Integrado em Engenharia Informática</p>
+							<p class="text-lessy"> Ano lectivo 2015/2016 </p>
 						</div>
 						<div class="start-images">
 							<img data-src="assets/UM_Logo.gif"/>
@@ -52,98 +46,181 @@
 					</div>
 				</section>
 				<section>
-					<div> 
-						<img data-src="assets/wedo.png"/> 
+					<div>
+						<img data-src="assets/wedo.png"/>
 					</div>
 					<h3>Entrevista</h2>
 					<div class="margin-top">
 						<div class="float-left">
 							<p>2h Total</p>
 							<p>45min apresentação</p>
-							<p>Perguntas e respostas</p>
 						</div>
-						<div class="float-right"> 
-							<p>Senior Product Architect</p>
+						<div class="float-right">
 							<p>Director of Product Development</p>
 							<p>Head of Product Architecture</p>
+							<p>Senior Product Architect</p>
 						</div>
 					</div>
 				</section>
 				<section>
 					<section>
-						<div> 
-							<img data-src="assets/wedo.png"/> 
+						<div>
+							<img data-src="assets/wedo.png"/>
 						</div>
 						<h2> Contextualização </h2>
 						<div>
-							<p> Sediada em braga</p>
-							<p> 12 países onde possui sede </p>
-							<p> 180+ clientes area telecomunicações </p>
+							<p> 12 países onde possui escritórios </p>
+							<p> Portugal, France , Ireland, Poland, Spain , UK , Brasil, Mexico, Egipto, Malasya , Australia </p>
+							<p> 180+ clientes área telecomunicações </p>
 							<p> 550 colaboradores </p>
 						</div>
 					</section>
 					<section>
+						<div class="margin-top">
+								<p> Framework aplicacional proprietária </p>
+						</div>
+						<div class="margin-top">
+								<p> Ferramenta de Streaming </p>
+						</div>
+						<div class="margin-top">
+								<div>
+									<img class="logo-size-10" data-src="assets/html5_logo.png"/>
+									<img class="logo-size-7" data-src="assets/css3_logo.png"/>
+									<img class="logo-size-11" data-src="assets/js3_logo.png"/>
+									<img class="logo-size-10" data-src="assets/c++_logo.png"/>
+									<img class="logo-size-10" data-src="assets/java_logo.png"/>
+									<img class="wedo-products-25" data-src="assets/bugzilla_logo.png"/>
+	 							</div>
+						</div>
+					</section>
+					<section>
 						<h2>O produto da WeDo</h2>
+						<div>
+						<img class="wedo-products-90" data-src="assets/wedo_raid7.jpg"/>
+						</div>
+						<div>
 						<img class="wedo-products" data-src="assets/logo_raid_healthcare.png"/>
 						<img class="wedo-products" data-src="assets/logo_raid_insurance.png"/>
+						</div>
+						<div>
 						<img class="wedo-products" data-src="assets/logo_raid_retail.png"/>
 						<img class="wedo-products" data-src="assets/logo_raid_telecom.png"/>
 						<img class="wedo-products" data-src="assets/logo_raid_utilities.png"/>
-					</section>
-				</section>
-				
-				<section>
-					<section>
-						<h2>Processo de desenvolvimento de software</h2>
-					</section>
-					<section>
-						<h2>Como funciona o desenvolvimento na WeDO</h2>
-						<p> Daily Reviews dentro da equipa </p>
-					</section>
-				</section>
-				<section>
-					<section> 
-						<h2>Gestão dos projetos</h2>		
-						<div class="float-left">
-							<img data-src="assets/ipma-logo.png"/>
 						</div>
-						<div>
+					</section>
+				</section>
+
+				<section>
+						<section>
+							<div>
+								<img data-src="assets/wedo.png"/>
+							</div>
+							<h2>Processo de Desenvolvimento</h2>
+							<div>
+								<ul class="dev-proc">
+									<li>On-premises software / Cloud computing (SaaS)</li>
+									<li>Sprint reviews por vídeo conferencia</li>
+									<li>Planeamento de sprints através de plugin no Jira</li>
+								</ul>
+							</div>
+						</section>
+						<section>
+							<h3>SCRUM</h3>
+							<br>
+							<div>
+								<ul class="dev-proc">
+									<li>O <i>daily SCRUM meeting</i> é feito no final de cada semana.</li>
+									<li>Periodicamente é realizado um review com o diretor da gestão do produto, cliente e equipa de integração.</li>
+									<li>A equipa fala diretamente com o product owner e explica quais as dificuldades no cumprimento de prazos para determinada sprint.</li>
+								</ul>
+							</div>
+						</section>
+						<section>
+							<h2> Dificuldades </h2>
+							<div>
+								<ul class="dev-proc">
+									<li>Falhas a nível do test driven development.</li>
+									<li>Equipas de <i>testers</i> participam nas <i>sprint reviews</i> mas mantêm imparcialidade nas soluções implementadas</li>
+									<li>O papel de scrumMaster ainda é misturado com outros, apesar de existir apenas um scrumMaster por equipa.</li>
+								</ul>
+							</div>
+						</section>
+					</section>
+				<section>
+					<section>
+					  <div>
+							<img data-src="assets/wedo.png"/>
+						</div>
+						<h2>Gestão dos projetos</h2>
+						<div class="margin-top-105">
+							<div class="float-left">
+								<img data-src="assets/ipma-logo.png"/>
+							</div>
+						</div>
+						<div class="float-right">
 							<p>Projetos Locais</p>
 							<p>Existência de casos não locais </p>
-						</div>		
+						</div>
 					</section>
-					<section> 
-						<img data-src="assets/jira_logo.png"/>
-						<p> cada stream = desenvolvimento de um projeto </p>
-						<p> contem "system requirements" / ambito / issues </p>
-						<p> andam até chegar ao produto final </p>
+					<section>
+						<div>
+							<img class="wedo-products-25" data-src="assets/confluence_rgb_blue.png"/>
+							<br>
+							+
+							<br>
+							<img class="wedo-products-25" data-src="assets/jira_logo.png" style="width:10%; height: 10%;"/>
+						</div>
+						<div class="margin-top">
+							<div class="float-left">
+								<img class="logo-size-50" data-src="assets/jira_project.png"/>
+							</div>
+							<div class="float-right">
+								<p class="text-less margin-top-30"> Desenvolvimento de um projeto </p>
+								<p class="text-less margin-top-30"> System requirements / âmbito / problemas </p>
+								<p class="text-less margin-top-30"> Evolução até produto final </p>
+							</div>
+						</div>
 					</section>
 					<section>
 						<h2>Escolha dos projectos</h2>
-						<p>Existência de canal de comunicação para levantamento de sugestões/issues </p>
-						<p>Reuniões para levantar issues e possíveis soluçoes</p>
-						<p>Divisões de issues e orçamento para cada uma das divisões</p>
-						<p>Product Board - decidir o top 5 ou prioridade no backlog </p> 	
+						<div class="margin-top">
+							<p class="margin-top-30">Canal de comunicação para levantamento de sugestões/problemas </p>
+							<p class="margin-top-30">Reuniões para levantar problemas e possíveis soluçoes</p>
+							<p class="margin-top-30">Divisões de problemas e orçamento para cada uma das divisões</p>
+							<p>Product Board - decidir o top 5 ou prioridade no backlog </p>
+						</div>
 					</section>
 					<section>
-						<h2>Avaliação dos projetos</h2>
-						<p> Cumprimento do orçamento </p>
-						<p> Cumprimento das metricas </p>
-						<p> Inquéritos de satisfação </p>
-						<p> Auditorias externas para garantir parametros de qualidade</p>
+						<h2>Avaliação do Sucesso dos Projetos</h2>
+						<div class="margin-top ">
+							<p> Cumprimento do orçamento </p>
+						</div>
+						<div class="margin-top">
+						<p> Cumprimento das <i>milestones</i></p>
+						</div>
+						<div class="margin-top">
+							<p> Inquéritos de satisfação </p>
+						</div>
+
 					</section>
 					<section>
 						<h2>Desafios</h2>
-						<p> Sincronização das equipas para garantir que todas completem ao mesmo tempo</p>
-						<p> Tradeoff "Segurança vs Rapidez"
-					</section>	
+						<div class="margin-top">
+							<p> Sincronização das equipas para garantir que todas terminem ao mesmo tempo</p>
+						</div>
+						<div class="margin-top">
+							<p> Tradeoff "Qualidade vs Rapidez"</p>
+						</div>
+						<img data-src="assets/Society.svg" height="100%" width="100%"/>
+					</section>
 				</section>
 
 				<!-- SLIDE FINAL -->
 				<section>
 					<div class="header">
 						<div class="start-header">
-							<p> Mestrado Integrado em Engenharia Informática</p>
+						 	<p class="text-less"> Mestrado Integrado em Engenharia Informática</p>
+							<p class="text-lessy"> Ano lectivo 2015/2016 </p>
 						</div>
 						<div class="start-images">
 							<img data-src="assets/UM_Logo.gif"/>
@@ -154,14 +231,7 @@
 						<h2>Gestão do Processo de Software</h2>
 						<h3>Trabalho Teorico</h3>
 						<div class="margin-top">
-							<div class="float-left">
-								<p>Miguel Vieira</p>
-								<p>Luis Brito</p>
-							</div>
-							<div class="float-right">
-								<p>Paulo Cardoso</p>
-								<p>Xavier Fernandes</p>
-							</div>
+								<p> Obrigado pela Atenção. </p>
 						</div>
 					</div>
 				</section>
@@ -185,6 +255,17 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+		</script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+		if( window.location.search.match( /print-pdf/gi ) ) {
+		    var link = document.createElement( 'link' );
+		    link.rel = 'stylesheet';
+		    link.type = 'text/css';
+		    link.href = 'pdf.css';
+		    document.getElementsByTagName( 'head' )[0].appendChild( link );
+		  }
 		</script>
 	</body>
 </html>
