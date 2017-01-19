@@ -88,41 +88,93 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+				
+					<h2 class="section-heading">Legionella Pneumophila </h2>
+						
+						<p>Legionelose é o nome genérico atribuido a duas infecções: a doença do legionário e a febre de Pontiac; ambas provocadas pela bactéria Legionella. Sendo que a doença do legionário é causada, mais especificamente, pela Legionella Pneumophila.</p> 
+					
+						<p>A Legionella Pneumophila é uma bactéria gram-negativa aeróbica intracelular facultativa, esta é encontrada em ambientes de água doce, onde cresce em biofilmes naturais ou em associação com protozoários livres. Esta bactéria toma o papel de parazita em protozoários, geralmente amebas, onde se replica intracelularmente.</p>
+									
+						<p>Esta bactéria é capaz de resistir à fagocitose das amebas, através da criação de um vacúolo (LCV), onde se replica intracelularmente. Este vacúolo evita a fundição com os lisossomas e interage com o retículo endoplasmático (RE) do hospedeiro, contribuindo para a protecção e proliferação da bactéria. Para além disso, a L. Pneumophila é um microorganismo que apresenta elevada virulência e resistência a biocidas.</p>
+								
+						<p>A Legionella Pneumophila tem um ciclo de vida bifásico: replicativo (não virulento) e transmissivo (virulento). Durante a fase replicativa, a bactéria cresce dentro do vacúolo das células hospedeiras, enquanto que na fase transmissiva, adquire flagelos e abandona os vacúolos.</p>
+									
+						<p>Embora os hospedeiros naturais da L. Pneumophila sejam protozoários (como as amebas), quando esta é inalada para os pulmões e fagocitada pelos macrófagos alveolares na forma aerossolizada, os mecanismos que permitem este patogéno oportunista replicar-se, funcionam como na replicação intracelular em amebas. Ou seja, para evitar ser degradada pelos macrófagos, a L.Pneumophila estabelece um vacúolo que a envolve (LCV) e, posteriormente, replica-se no interior deste. Isto pode levar a uma infecção pulmonar, que no caso dos humanos pode resultar numa pneumonia atípica (doença do legionário).</p>
+									
+						<p>Este microorganismo usa um sistema de excreção que injecta mais de 300 proteínas bacterianas diferentes nas células hospedeiras, durante a infecção. São estas proteínas bacterianas que vão visar a génese do vacúolo, através de atividades bioquímicas que têm como alvo fatores do hospedeiro que controlam os processos de transporte de membranas. Ou seja, as proteínas bacterianas fazem com que haja corrupção, no hospedeiro, das proteínas que controlam a biogénese e a fusão de vesículas secretoras que saem do ER  e das proteínas que regulam a forma e dinâmica do ER. Para além de recrutarem membranas derivadas do ER para a biogénese do vacúolo, a bactéria tem uma capacidade notável de interferir no processo celular de autofagia do hospedeiro, o que contribui para a sua protecção.</p>
+									
+						<p>Os surtos de legionella são devidos, principalmente, à sua capacidade de colonizar e persistir em instalações de água, apesar dos intensos tratamentos físicos e químicos. Estes tratamentos, geralmente, não são muito eficientes e após um periodo de latência, a L.Pneumophila é capaz de re-colonizar rapidamente estes sistemas.</p>
+									
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1">
+								
+								<h3 class="section-heading">Classificação Científica</h3>
+					
+								<p><strong>Reino -</strong> Bactérias</p>
 
-                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+								<p><strong>Filo -</strong> Proteobactérias</p>
 
-                    <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+								<p><strong>Classe -</strong> GammaProteobacterias</p>
+					
+								<p><strong>Ordem -</strong> Legionellales</p>
+					
+								<p><strong>Famílias -</strong> Legionellaceae</p>
+					
+								<p><strong>Género -</strong> Legionella</p>
+					
+								<p><strong>Espécie -</strong> Legionella Pneumophila</p>
+					
+								<p><strong>Subespécie -</strong> Legionella pneumophila subsp. Pneumophila</p>
+					
+							</div>
+						</div>
+					</div>
+							
+					<h2 class="section-heading">Análise da Literatura</h2>
 
-                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+                    <p>A informação relativa à Legionella Pneumophila referida previamente foi recolhida recorrendo à base de dados PubMed.</p>
 
-                    <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+                    <p>Tendo em consideração que, numa fase posterior da análise, será necessário  filtrar a informação mais rigorosamente, utilizaram-se as potencialidades do Biopython para automatizar as pesquisas realizadas através da criação do scrip Literatura.py, que permite aceder ao PubMed e desenvolve o ficheiro de texto Legionella gene.txt com os artigos fornecidos pelo próprio.</p>
 
-                    <h2 class="section-heading">The Final Frontier</h2>
+                    <h2 class="section-heading">Análise das sequências e das features presentes no NCBI</h2>
+					
+					<p>De modo a obter informações relevantes sobre o genoma da Legionella Pneumophila, foi desenvolvido o script analiseSeq.py, que tem como objectivo aceder ao NCBI e guardar ,em formato genbank, o ficheiro example.gb correspondente à zona do genoma que representa o intervalo de genes [lpg2542 a lpg2772].</p>
+					
+					<h2 class="section-heading">Análise de homologias por BLAST </h2>
 
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+                    <p>O BLAST (Basic Local Alignment Search Tool) pesquisa e compara dentro de bases de dados existentes sequências semelhantes às introduzidas, permitindo então verificar a existência de homologias com outros organismos. </p>
 
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+                    <!<a href="#">
+                        <!<img class="img-responsive" src="img/post-sample-image.jpg" alt="">
+                    <!</a>
+                    <!<span class="caption text-muted"><!To go places and do things that have never been done before – that’s what living is all about.</span>
 
-                    <blockquote>The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+                    <p>Para correr a ferramenta Blast de forma automatizada, de forma a acelerar o processo de recolha de informação sobre a bactéria, foi criado o script analiseSeq.py. Para além de automatizar o blast, este script cria também uma pasta na mesma directoria onde  se encontra guardado, onde guarda toda a informação relativa ao blast no ficheiro GeneID_19834107.xml.</p>
 
-                    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+					<h2 class="section-heading">Ferramentas de análise das propriedades da proteína</h2>
+					
+                    <p>Com base em algumas ferramentas conhecidas, houve a necessidade de procurar as propridades das proteínas em estudo. Para isso, primeiro foi feita uma pesquisa no NCBI, com o nome do genoma da "Legionella pneumophila", limitando-a à nossa zona de interesse pela opção "Change region shown" (2873801-3124550).</p>
 
-                    <h2 class="section-heading">Reaching for the Stars</h2>
-
-                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-
-                    <a href="#">
-                        <img class="img-responsive" src="img/post-sample-image.jpg" alt="">
-                    </a>
-                    <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-                    <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
-                </div>
+                    <p>Definido o genoma, foi criada uma ferramenta para facilitar a análise das propriedades das proteínas através da realização do script analiseSeq.py.  Toda a informação relativa ao genoma foi armazenada pelo script na pasta fastas, criada pelo próprio, onde foi guardado para cada gene um ficheiro em formato fasta.</p>
+                
+					<p>Posteriormente, a ferramenta Uniprot foi utilizada para recolher informação acerca das proteínas, em particular o nome do gene da proteína, a função molecular da proteína, a sua localização celular e a existência de ficheiros curados (reviewed). 
+				
+					<h2 class="section-heading">Bases de dados de domínios de proteínas</h2>
+				
+					<p>Quando realizamos análises bioinformáticas de sequências protéicas identificamos domínios como blocos de motivos estruturais ou de sequências que são recorrentes em proteínas estudadas.</p>
+					
+					<p>Contudo, mesmo utilizando várias ferramentas bioinformáticas, houve proteínas cuja função é desconhecida. Assim, utilizamos a NCBI CDD (“conserved domain database”), esta permite-nos determinar o domínio destas proteínas sem função e consequentemente aumentar a precisão da previsão das funções destas.</p>
+				
+					<p>Para isso, foi criado um script (.py) que procura na base de dados NCBI CDD os domínios das proteinas em estudo e, ao mesmo tempo, podemos aceder a mais informações sobre estas sem necessitar de outras ferramentas/bases de dados. A ferramenta não resolve todos os problemas relativos à anotação funcional de proteínas mas dá para observar, que dá uma ajuda valiosa.</p>
+				
+					<h2 class="section-heading">Alinhamento múltiplo e filogenia</h2>
+					
+					<p>Numa útlima fase de análise sobre os genes, destacam-se os que têm função indefinida e para tal, procede-se a uma análise filogenética entre este conjunto de genes com função desconhecida e um conjunto de genes com função bem definida através das análises anteriormente efectuadas.</p>
+					
+					<p>As árvores filogenéticas respetivas encontram-se representadas seguidamente, sendo que apenas se definiram de acordo com ... genes de função desconhecida, escolhidos previamente, uma vez que eram em grande número na ordem dos ... genes e todos eles, seguem o mesmo conceito definido anteriormente.</p>
+				
+				</div>
             </div>
         </div>
     </article>
@@ -134,24 +186,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
+                    <!<ul class="list-inline text-center">
+                        <!<li>
+                            <!<a href="#">
+                                <!<span class="fa-stack fa-lg">
+                                    <!<i class="fa fa-circle fa-stack-2x"></i>
+                                    <!<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                <!</span>
+                            <!</a>
+                        <!</li>
+                        <!<li>
+                            <!<a href="#">
+                                <!<span class="fa-stack fa-lg">
+                                    <!<i class="fa fa-circle fa-stack-2x"></i>
+                                    <!<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                <!</span>
+                            <!</a>
+                        <!</li>
+                        <!<li>
                             <a href="#">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
