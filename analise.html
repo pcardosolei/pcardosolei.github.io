@@ -100,7 +100,53 @@ Em relação ao genoma em estudo, foram encontrados 18 genes com funções, poss
 Gene Identification (Name, Locus tag, NCBI GeneID, NCBI Acession (GI))
 EC number
 KEGG reactions ID's
-KEGG pahtways</p>
+KEGG pathways</p>
+<pre><code>
+def keggMet(tag):
+  request = REST.kegg_get("lpn:"+tag)
+  open("lpn:"+tag,"w").write(request.read())
+  records = Enzyme.parse(open("lpn:"+tag))
+  record = list(records)[0]
+  ofile = open("lpn:"+tag,"r")
+  owrite = open("kegg/lpn:"+tag,"w")
+  flagPath=flagMotifs=flagOrtho=1
+  for line in ofile:
+    if "ORTHOLOGY" in line or flagPath == 0:
+      if flagOrtho == 1:
+        flagOrtho = 0
+        owrite.write(line)
+      elif "ORGANISM" in line:
+        flagOrtho = 1
+      else:
+        owrite.write(line)
+    if "PATHWAY" in line or flagPath == 0:
+      if flagPath == 1:
+        flagPath = 0
+        owrite.write(line)
+      elif "BRITE" in line or "MODULE" in line:
+        flagPath = 1
+      else:
+        owrite.write(line)
+    if "MOTIF" in line or flagMotifs == 0:
+      if flagMotifs == 1:
+        flagMotifs = 0
+        owrite.write(line)
+      elif "DBLINKS" in line:
+        flagMotifs = 1
+      else:
+        owrite.write(line)
+    if "NAME" in line:
+      name = re.split(r' ',line)
+      owrite.write("GENE NAME: "+ name[-1])
+    if "REACTIONS" in line or flagReactions == 0:
+      if flagReactions == 1:
+        flagReactions = 0
+        owrite.write(line)
+      elif "COMPOUND" in line:
+        flagReactions = 1
+      else:
+        owrite.write(line)
+</code></pre>
 
             <h2>Análise aos genes com função reguladora: fatores de transcrição</h2>
 <p>
@@ -109,6 +155,10 @@ Em relação ao genoma em estudo, foram encontrados 10 genes com função regula
 Gene Identification (Name, Locus tag, NCBI GeneID, NCBI Acession (GI), Strand)
 Transcription Identification (Name, Properties-Transcription ID, Sequence ID -, Domain Architecture)
 </p>
+                <a href="http://www.transcriptionfactor.org/index.cgi?Genome+gn:x7+id:+page:1+limit:50">
+                    <img class="img-responsive" src="img/transporte.png" alt="">
+                </a>
+
         <h2>Análise dos genes com função patogénica e de resistência</h2>
         <p>No ponto de vista da interação da Legionella pneumophila com o hospedeiro humano, a infeção e interação por parte desta bactéria, bem como a sua propagação e fármacos a utilizar, são pontos de interesse neste trabalho. Assim sendo, e com base na base de dados PATRIC, identificou-se um aglomerado de genes envolvidos em processos patogénicos e de resistência a antibióticos. Foi possível recolher ainda a função biológica de cada gene e os processos em que estão envolvidos.
 Identificação dos genes (Nome; Locus tag; PATRIC ID);
@@ -116,6 +166,15 @@ Propriedades (Virulência ou Resistência);
 Source;
 Product (proteína codificada pelo gene);
 Function.</p>
+
+        <h2>Análise dos genes com função de transporte</h2>
+        <p>
+Um transportador pode atuar por diferentes mecanismos, transportando compostos do interior/exterior da célula para o exterior/interior. Cada transportador é caracterizado pelo tipo de compostos que movimenta e pelo local onde se encontra na célula.
+Em relação ao genoma em estudo, foram encontrados 44 genes com função de transporte e no sentido de aprofundar a pesquisa em termos de transportadores, realizou-se um estudo às proteínas transportadoras codificadas pela zona do genoma de interesse. Assim, utilizou-se a base de dados TCDB e transportDB, e obtiveram-se os resultados organizados por:
+Identificação do gene (Nome; Locus tag;  GeneID; GI; KEGG ID);
+Family ID;
+Family TC;
+Tipo de transportador;</p>
 
 
 
