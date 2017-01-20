@@ -55,7 +55,10 @@
                         <a href="about.html">Legionella</a>
                     </li>
                     <li>
-                        <a href="post.html">Decisões</a>
+                        <a href="post.html">Passos Iniciais</a>
+                    </li>
+                    <li>
+                        <a href="analise.html">Redes metabólica/regulatória</a>
                     </li>
                     <li>
                         <a href="conclusion.html">Conclusão</a>
@@ -78,9 +81,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Man must explore, and this is exploration at its greatest</h1>
-                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-                        <span class="meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</span>
+                        <h1></h1>
+                        <h2 class="subheading"></h2>
                     </div>
                 </div>
             </div>
@@ -140,6 +142,84 @@
                     <p>A informação relativa à Legionella Pneumophila referida previamente foi recolhida recorrendo à base de dados PubMed.</p>
 
                     <p>Tendo em consideração que, numa fase posterior da análise, será necessário  filtrar a informação mais rigorosamente, utilizaram-se as potencialidades do Biopython para automatizar as pesquisas realizadas através da criação do scrip Literatura.py, que permite aceder ao PubMed e desenvolve o ficheiro de texto Legionella gene.txt com os artigos fornecidos pelo próprio.</p>
+
+                    <pre><code>
+from Bio import Entrez
+from Bio import Medline
+
+import os
+import json
+
+"""
+  Esta funcao serve para encontrar os IDs do artigos que estão relacionados com a frase colocada
+"""
+def obterListaTermo(user,termo,num):
+  Entrez.email = user
+  handle = Entrez.egquery(term=termo, usehistory="y")
+  record = Entrez.read(handle)
+
+  """
+    Relaxamento na busca de artigos
+  """
+  for row in record["eGQueryResult"]:
+    if row["DbName"] == "pubmed":
+      value = row["Count"]
+      if value == 0:
+        return -1
+      elif int(value) > num:
+        value = str(num)
+
+  handle = Entrez.esearch(db="pubmed", term=termo,retmax=value, usehistory="y")
+  record = Entrez.read(handle)
+  idList = record["IdList"] #todos os ids com o termo legionella
+  return idList
+
+"""
+  Funcao para obter informacao do artigo a partir do ids da funcao em cima
+"""
+def recordMedline(user,termo,num):
+  idList = obterListaTermo(user,termo,num)
+  if idList == -1:
+    print("Não existem artigos")
+    return -1
+  else:
+    handle = Entrez.efetch(db="pubmed",id=idList,rettype="medline",retmode="text", usehistory="y")
+    records = Medline.parse(handle)
+    # transformar isto numa lista
+    records = list(records)
+    print(records)
+    return records
+
+"""
+  Gravar Ficheiro Literatura
+"""
+def saveLiteratura(termo,records):
+  ofile = open("literatura/"+termo+".txt","w")
+  ofile.write(termo+"\n\n")
+  for record in records:
+    ofile.write(json.dumps(record)+"\n\n")
+  ofile.close()
+
+"""
+  Criar pasta Literatura
+"""
+def createFolder(directory):
+    if not os.path.exists(directory):
+      os.makedirs(directory)
+
+"""
+  Zona de teste
+"""
+def main():
+  termo = "Legionella gene" #frase a usar nas pesquisas
+  createFolder("literatura")
+  records = recordMedline("history.a61043@alunos.uminho.pt",termo,10)
+  saveLiteratura(termo,records)
+
+########
+main()
+                    </code></pre>
+
 
                     <h2 class="section-heading">Análise das sequências e das features presentes no NCBI</h2>
 
