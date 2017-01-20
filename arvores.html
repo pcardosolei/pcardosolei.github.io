@@ -83,10 +83,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
+                    <div class="page-heading">
                         <h1>Legionella pneumophila</h1>
                         <hr class="small">
-                        <span class="subheading">Grupo 12 - BioInformática</span>
+                        <span class="subheading">Uma breve introdução</span>
                     </div>
                 </div>
             </div>
@@ -97,45 +97,32 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Legionella pneumophila
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Uma breve introdução
-                        </h3>
-                    </a>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Os passos iniciais neste projeto.
-                        </h2>
-                    </a>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Tomadas de decisão
-                        </h2>
-                    </a>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Conclusão
-                        </h2>
-                        <h3 class="post-subtitle">
-                            As conclusões finais relativas a este projeto.
-                        </h3>
-                    </a>
-                </div>
-                <hr>
+
+                    <h2>Bases de dados de domínios de proteínas</h2>
+
+                    <p>Quando realizamos análises bioinformáticas de sequências protéicas identificamos domínios como blocos de motivos estruturais ou de sequências que são recorrentes em proteínas estudadas.</p>
+
+                    <p>Contudo, mesmo utilizando várias ferramentas bioinformáticas, houve proteínas cuja função é desconhecida. Assim, utilizamos a NCBI CDD (“conserved domain database”), esta permite-nos determinar o domínio destas proteínas sem função e consequentemente aumentar a precisão da previsão das funções destas.</p>
+
+                    <p>Para isso, foi criado um script (.py) que procura na base de dados NCBI CDD os domínios das proteinas em estudo e, ao mesmo tempo, podemos aceder a mais informações sobre estas sem necessitar de outras ferramentas/bases de dados. A ferramenta não resolve todos os problemas relativos à anotação funcional de proteínas mas dá para observar, que dá uma ajuda valiosa.</p>
+
+            <h2>Alinhamento múltiplo e filogenia</h2>
+    <p>Numa última fase de análise sobre os genes, destacam-se os que têm função indefinida e para tal, procede-se a uma análise filogenética entre este conjunto de genes com função desconhecida e um conjunto de genes com função bem definida através das análises anteriormente efectuadas.
+As árvores filogenéticas respetivas encontram-se representadas seguidamente, sendo que apenas se definiram de acordo com 3 genes de função desconhecida, escolhidos previamente, uma vez que eram em grande número na ordem dos 250 genes e todos eles, seguem o mesmo conceito definido anteriormente.</p>
+                <a href="#">
+                    <img class="img-responsive" src="img/lpg2560.png" alt="">
+                </a>
+                <p>Árvore filogenética do blast relativo ao locusTag 2560</p>
+                <a href="#">
+                    <img class="img-responsive" src="img/lpg2643.png" alt="">
+                </a>
+                <p>Árvore filogenética do blast relativo ao locusTag 2643</p>
+                <a href="#">
+                    <img class="img-responsive" src="img/lpg2758.png" alt="">
+                </a>
+                <p>Árvore filogenética do blast relativo ao locusTag 2748</p>
             </div>
+
         </div>
     </div>
 
