@@ -1,0 +1,4 @@
+html, body, header, .page-top, .container {
+	height: 100%;
+	max-height: 100%
+}
