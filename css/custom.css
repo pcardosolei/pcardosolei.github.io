@@ -7,3 +7,21 @@ html, body, header, .page-top, .container {
 	color: white;
 	font-family: "Courier New", Courier, monospace !important;
 }
+
+.black-text {
+	color: black;
+	text-align: center;
+	font-family: "Courier New", Courier, monospace !important;
+}
+
+
+#summary {
+	background-color: #02182B; !important
+}
+
+
+.footerImages {
+	max-height: 45px;
+	max-height: 45px;
+	margin-left: 56px;
+}
