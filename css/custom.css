@@ -19,9 +19,11 @@ html, body, header, .page-top, .container {
 	background-color: #02182B; !important
 }
 
-
+#maincontent {
+	height: 400px;
+	padding-top: 50px;
+}
 .footerImages {
 	max-height: 45px;
-	max-height: 45px;
-	margin-left: 56px;
+	max-height: 45px
 }
