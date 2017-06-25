@@ -7,21 +7,41 @@
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   body {
-    background-color: #F09A9D; /* Red */
+    background-image: url("../img/me.jpg");
+    background-size: cover;
+    max-height: 100%;
+    vertical-align: bottom;
   }
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   body {
-    background-color: #F5CF8E; /* Yellow */
+    background-image: url("../img/me.jpg");
+    background-size: cover;
+    max-height: 100%;
+    vertical-align: bottom;
   }
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 961px) and (max-width: 1440px) {
   body {
     background-image: url("../img/me.jpg");
     background-repeat: no-repeat;
+  }
+}
+
+/* Desktop 4K Styles */
+@media only screen and (min-width: 1441px) {
+  body {
+    background-image: url("../img/me.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 30px;
+  }
+
+  .lead {
+    font-size: 56px;
   }
 }
