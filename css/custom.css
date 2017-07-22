@@ -9,6 +9,7 @@
   body {
     background-image: url("../img/me.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     max-height: 100%;
   }
   .site-wrapper-inner {
@@ -21,6 +22,7 @@
   body {
     background-image: url("../img/me.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     max-height: 100%;
   }
   .site-wrapper-inner {
