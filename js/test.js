@@ -31,16 +31,24 @@ function setup() {
   //Initialize sounds here
   var music = sounds["sounds/57583__digifishmusic__palm-cove-waves.wav"];
 
-  let myname = new PIXI.Text('Paulo Cardoso',{fontFamily : 'emizfont', fontSize: 48, fill : 0xFFFFFF, align : 'center'});
+  let myname = new PIXI.Text('Paulo Cardoso',{ fontSize: 48, fill : 0xFFFFFF, align : 'center'});
   myname.tint = 0xFFFFFF;
   myname.anchor.set(0.5,0.5);
   myname.position.set( window.innerWidth / 2 , window.innerHeight / 2);
   stage.addChild(myname);
 
+
   let changesSoon = new PIXI.Text('Website is being built. Expect changes soon.',{fontFamily : 'Arial', fontSize: 24, fill : 0xFFFFFF, align : 'center'});
   changesSoon.tint = 0xFFFFFF;
   changesSoon.anchor.set(0.5,0.5);
   changesSoon.position.set( window.innerWidth / 2 , window.innerHeight - 30);
+
+  changesSoon.interactive = true;
+  changesSoon.on('tap', (event) => {
+     //handle event
+     music.pause();
+     console.log("123");
+  });
   stage.addChild(changesSoon);
 
 
