@@ -91,9 +91,6 @@ ul ul a {
 
 @media (max-width: 768px) {
     #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
         margin-left: 0;
     }
 }
@@ -132,4 +129,8 @@ ul ul a {
     bottom: 5px;
     right: 50%;
     transform: translateX(50%);
+}
+
+.white, .white a {
+  color: #fff;
 }
