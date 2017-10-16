@@ -121,8 +121,8 @@ ul ul a {
     padding: 10px !important;
 }
 
-/* Changing the arrow position to bottom center position, 
-   translateX(50%) works with right: 50% 
+/* Changing the arrow position to bottom center position,
+   translateX(50%) works with right: 50%
    to accurately  center the arrow */
 #sidebar a[aria-expanded="false"]::before, #sidebar a[aria-expanded="true"]::before {
     top: auto;
@@ -133,4 +133,41 @@ ul ul a {
 
 .white, .white a {
   color: #fff;
+}
+
+/*
+    Extra to control
+*/
+.soon {
+    opacity: 0.1;
+}
+
+
+/*
+    HOME PAGE
+*/
+
+#img_home {
+    width: 25%
+    height: 25%;
+    max-height: 25%;
+    max-width: 25%;
+    border-radius: 30px;
+}
+
+#div_img_home {
+    padding-top: 50px;
+    text-align:center;
+    position:relative;
+}
+
+#div_links {
+    padding-top: 50px;
+    text-align:center;
+    position:relative;
+}
+
+.big-size {
+    height: 200px;
+    width: 200px;
 }
