@@ -227,3 +227,16 @@ ul ul a {
     height: 50%;
     width: 50%;
 }
+
+
+/*
+    Volunteer page
+*/
+
+.carousel-item.active,
+.carousel-item.active + .carousel-item {
+   width: 50%;
+   display: block;
+   float:left;
+}  
+
