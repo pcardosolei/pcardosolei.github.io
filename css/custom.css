@@ -151,6 +151,10 @@ ul ul a {
     padding-top: 10px;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /*
     Media
 */
@@ -238,5 +242,5 @@ ul ul a {
    width: 50%;
    display: block;
    float:left;
-}  
+}
 
