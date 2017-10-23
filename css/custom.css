@@ -143,6 +143,9 @@ ul ul a {
     margin-right: 50px;
 }
 
+.padding_top_50 {
+    padding-top: 50px;
+}
 .padding_top_20 {
     padding-top: 20px;
 }
@@ -258,3 +261,16 @@ ul {
     height: 50%;
 }
 
+/*
+    Exchange page  
+*/
+
+.img_exchange {
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.img_exchange img {
+    width: 100%;
+}
