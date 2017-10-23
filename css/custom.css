@@ -156,6 +156,15 @@ ul {
 }
 
 /*
+    Center Image in div
+*/
+
+.center_img {
+    display:block;
+    margin:auto;
+}
+
+/*
     Media
 */
 @media (max-width: 768px) {
