@@ -222,7 +222,7 @@ ul {
 }
 
 .link_img {
-    padding: 0px 20px;
+    margin: 0px 20px;
 }
 
 @media (max-width: 768px){
@@ -232,6 +232,13 @@ ul {
         max-height: 40%;
         max-width: 40%;
         border-radius: 200px;
+    }
+
+    #div_links i {
+        max-width: 30%;
+        min-height: 30%;
+        float: left;
+        margin: 0px 10px;
     }
 }
 
@@ -262,7 +269,7 @@ ul {
 }
 
 /*
-    Exchange page  
+    Exchange page
 */
 
 .img_exchange {
