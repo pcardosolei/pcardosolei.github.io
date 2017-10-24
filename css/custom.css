@@ -24,23 +24,6 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
-    content: '\e259';
-    display: block;
-    position: absolute;
-    right: 20px;
-    font-family: 'Glyphicons Halflings';
-    font-size: 0.6em;
-}
-
-a[aria-expanded="true"]::before {
-    content: '\e260';
-}
-
 .wrapper {
     display: flex;
     align-items: stretch;
@@ -52,7 +35,7 @@ a[aria-expanded="true"]::before {
     color: #fff;
     min-width: 80px;
     max-width: 80px;
-    min-height: 100vh;
+    height: 100vh;
     text-align: center;
 }
 
@@ -80,10 +63,6 @@ a[aria-expanded="true"]::before {
     background: #fff;
 }
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-}
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
@@ -114,16 +93,6 @@ ul ul a {
 /* Same dropdown links padding*/
 #sidebar ul ul a {
     padding: 10px !important;
-}
-
-/* Changing the arrow position to bottom center position,
-   translateX(50%) works with right: 50%
-   to accurately  center the arrow */
-#sidebar a[aria-expanded="false"]::before, #sidebar a[aria-expanded="true"]::before {
-    top: auto;
-    bottom: 5px;
-    right: 50%;
-    transform: translateX(50%);
 }
 
 .white, .white a {
@@ -259,17 +228,14 @@ ul {
 /*
     Volunteer page
 */
+#img_volunteer {
+    margin-top: 20px;
+}
 
-.carousel-item.active,
-.carousel-item.active + .carousel-item {
+#img_volunteer img {
    width: 50%;
    display: block;
    float:left;
-}
-
-.img_caroussel {
-    width: 50%;
-    height: 50%;
 }
 
 /*
