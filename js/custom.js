@@ -1,48 +1,61 @@
-/*$(this).mousemove(function( event ) {
-	$("#test").move
-});
-*/
+var CANVAS_WIDTH = window.innerWidth;
+var CANVAS_HEIGHT = 300;
 
-/*
-window.onload = initDivMouseOver;
-function initDivMouseOver()   {
-   var div = document.getElementById("div_links");
-   var github = document.getElementById("github_icon");
-   var instagram = document.getElementById("instagram_icon");
+var FPS = 60;
+    
+var canvas;
+var context;
+var dot;
 
-   div.mouseIsOver = false;
+init();
 
-   div.onmouseover = function()   {
-      this.mouseIsOver = true;
-      $(github).animate({
-		  opacity: .5,
-		  height: "50%"
-	   }, 100, function() {
-    	// Animation complete.
-  		});
-      moveLinkedinOut();
-    }
-   div.onmouseout = function()   {
-      this.mouseIsOver = false;
-   }
+function init() {
+  canvas = document.getElementById('canvas');
+  
+  if (canvas && canvas.getContext) {
+    context = canvas.getContext('2d');	
+    canvas.width = CANVAS_WIDTH;
+    canvas.height = CANVAS_HEIGHT;
+  
+    createTrail();
+    
+    setInterval(loop, 1000 / FPS);
+  }
 }
 
-function moveLinkedinOut(){
-  var linkedin = document.getElementById("linkedin_icon");
-  $(linkedin).animate({top: "-=1000"}, 1000);
-  $(linkedin).animate({opacity: .3},100);
+function createTrail() {
+  dot = {
+    x: -10, 
+    y: 100,
+    speed: 1,
+    direction: Math.PI * 2
+  }
 }
-*/
-$(loop);
 
+function updatePosition() {
+  var dx = dot.x + dot.speed * Math.cos(dot.direction);
+  var dy = dot.y + dot.speed * Math.sin(dot.direction);
+  
+  if (dot.x > CANVAS_WIDTH) {
+    dot.x = -10;
+    updatePosition();
+  } else {
+    dot.x = dx;
+    dot.y = dy;
+  }
+}
 
-function loop(){
-	var elem = document.getElementById("test");
-	var width = screen.width;
-	var x = $(elem).position();
-	if (x.left > width) {	
-		$(elem).css({'left': '-10px	'});
-	}
-	$(elem).animate({'left': "+=100"},2000,easing:'linear',loop);
-
+function loop() {
+  updatePosition();
+  
+  // Draw over the whole canvas to create the trail effect
+  context.fillStyle = 'rgba(255, 255, 255, .05)';
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  
+  // Draw the dot
+  context.beginPath();
+  context.fillStyle = '#ff0000';
+  context.moveTo(dot.x, dot.y);
+  context.arc(dot.x, dot.y, 3, 0, Math.PI*2, true);
+  context.fill();
 }
