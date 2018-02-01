@@ -1,5 +1,68 @@
 /*
     ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
 */
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
+
+/*
+	General stuff
+*/ 
+body {
+	font-family: 'Indie Flower', cursive;
+}
+
+/*
+	Background images
+*/
+
+#intro { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+ }
+
+
+
+/*
+ 	Position elements in slides
+*/
+
+ .pos_intro {
+ 	position: relative;
+ 	text-align: center;	
+ 	color: white;
+ }
+
+ .padding_top_35 {
+ 	padding-top: 35px;
+ }
+
+.padding_top_15 {
+	padding-top: 15px;
+}
+
+.padding_top_25 {
+	padding-top: 25px;
+}
+
+button {
+	opacity: 0.15;
+}
+
+.link_img {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+/*
+	Size letters
+*/ 
+
+h1 {
+	font-size : 52px;
+}
