@@ -80,3 +80,11 @@ button {
 h1 {
 	font-size : 52px;
 }
+
+/*
+	Color
+*/
+
+.color_white {
+	color: white;
+}
