@@ -79,7 +79,7 @@ button {
 
 
 /*
-	Size letters
+	Size letters and text scale
 */
 
 h1 {
@@ -90,6 +90,9 @@ p {
 	font-size : 29px;
 }
 
+#aboutMe_text {
+  text-align: justify;
+}
 /*
 	Color
 */
