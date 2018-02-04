@@ -6,35 +6,38 @@
 
 /*
 	General stuff
-*/ 
+*/
 body {
 	font-family: 'Indie Flower', cursive;
 }
 
 /*
-	Background images
+	Color Schemes
 */
 
-#intro { 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-	
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
- }
+#intro_1 {}
 
+#intro_2 {}
 
+#intro_3 {}
 
+#intro_4 {}
+
+#intro_5 {}
+
+#intro_6 {}
 /*
  	Position elements in slides
 */
 
  .pos_intro {
  	position: relative;
- 	text-align: center;	
+ 	text-align: center;
  	color: white;
+ }
+
+ #intro_6 .pos_intro{
+  color: black;
  }
 
  .padding_top_35 {
@@ -63,9 +66,16 @@ button {
 }
 
 
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+ }
+
+
 /*
 	Size letters
-*/ 
+*/
 
 h1 {
 	font-size : 52px;
