@@ -148,6 +148,14 @@ p {
 	Image resizing
 */
 
+#aboutme_photo , #arredasPhoto_me, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 #aboutme_photo {
 	max-width: 55%;
 	max-height: 55%;
@@ -185,8 +193,8 @@ p {
 }
 
 #synergia_logo {
-    display:block;
-    margin:auto;
+   display:block;
+   margin:auto;
 }
 
 #arredas_logo {
@@ -199,6 +207,10 @@ p {
   margin: auto;
 }
 
+#opportunity_photo {
+	max-height: 75%;
+	max-width: 75%;	
+}
 
 @media (max-width: 768px){
   #aboutme_photo {
