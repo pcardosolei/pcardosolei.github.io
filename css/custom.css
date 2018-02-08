@@ -7,10 +7,13 @@
 /*
 	General stuff
 */
-body {
+body h1, h2, h3, h4, h5, h6{
 	font-family: 'Indie Flower', cursive;
 }
 
+body p {
+  font-family: "Trebuchet MS", sans-serif;
+}
 /*
 	Color Schemes
 */
@@ -157,8 +160,8 @@ p {
   bottom: 0;
 }
 #aboutme_photo {
-	max-width: 55%;
-	max-height: 55%;
+	max-width: 100%;
+	max-height: 100%;
 	border-radius: 10px;
 }
 
@@ -209,7 +212,7 @@ p {
 
 #opportunity_photo {
 	max-height: 75%;
-	max-width: 75%;	
+	max-width: 75%;
 }
 
 @media (max-width: 768px){
@@ -236,4 +239,8 @@ p {
 
 .max-height {
   height: 100vw;
+}
+
+.fill {
+  height: 100% !important;
 }
