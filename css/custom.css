@@ -131,8 +131,9 @@ p {
  }
 }
 
-.description #aboutMe_text {
+.description {
   text-align: justify !important;
+  text-justify: inter-word !important; 
 }
 
 #aboutMe_text {
