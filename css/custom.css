@@ -79,6 +79,10 @@ body p {
 .padding_right_30 {
   padding-right: 30px;
 }
+
+.padding_top_10 {
+  padding-top: 5px;
+}
 /*
   Others
 */
@@ -152,7 +156,7 @@ p {
 	Image resizing
 */
 
-#aboutme_photo , #arredasPhoto_me, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo {
+#aboutme_photo , #arredasPhoto_me, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica {
   position: absolute;
   margin: auto;
   top: 0;
@@ -258,4 +262,8 @@ p {
 
 .fp-slidesNav {
 	text-align: center! important;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	background: white !important;
 }
