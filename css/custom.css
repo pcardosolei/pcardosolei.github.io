@@ -68,6 +68,10 @@ body p {
   padding-left: 60px;
 }
 
+.padding_left_30 {
+  padding-left: 30px;
+}
+
 .padding_right_60 {
   padding-right: 60px;
 }
@@ -82,6 +86,10 @@ body p {
 
 .padding_top_10 {
   padding-top: 5px;
+}
+
+.padding_bottom_5 {
+  padding-bottom: 5px;
 }
 /*
   Others
@@ -177,8 +185,8 @@ p {
 }
 
 #windmillImage {
-  max-height: 80%;
-  max-width: 80%;
+  min-height: 75%;
+  max-height: 150%;
   border-radius: 10px;
 }
 
@@ -221,23 +229,17 @@ p {
 }
 
 #video_salonica {
-	max-height: 100%;
+	min-height: 100%;
 	max-width: 100%;
 }
 
 @media (max-width: 768px){
-  #aboutme_photo {
+  #aboutme_photo ,#opportunity_photo, #video_salonica {
     max-width: 0%;
     max-height: 0%;
   }
 }
 
-@media (max-width: 480px){
-  #aboutme_photo {
-    max-width: 0%;
-    max-height: 0%;
-  }
-}
 
 /*
   Height , width changes
