@@ -171,8 +171,8 @@ p {
 }
 
 #arredasPhoto_me {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 10px;
 }
 
@@ -216,26 +216,26 @@ p {
 }
 
 #opportunity_photo {
-	max-height: 75%;
-	max-width: 75%;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 #video_salonica {
-	max-height: 50%;
-	max-width: 50%;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 @media (max-width: 768px){
   #aboutme_photo {
-    max-width: 40%;
-    max-height: 40%;
+    max-width: 0%;
+    max-height: 0%;
   }
 }
 
 @media (max-width: 480px){
   #aboutme_photo {
-    max-width: 30%;
-    max-height: 30%;
+    max-width: 0%;
+    max-height: 0%;
   }
 }
 
