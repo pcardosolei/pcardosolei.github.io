@@ -91,6 +91,16 @@ body p {
 .padding_bottom_5 {
   padding-bottom: 5px;
 }
+
+.padding_bottom_30 {
+  padding-bottom: 30px;
+}
+
+.padding_pos_intro {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 /*
   Others
 */
@@ -145,7 +155,11 @@ p {
 
 .description {
   text-align: justify !important;
-  text-justify: inter-word !important; 
+  text-justify: inter-word !important;
+}
+
+.description_p {
+  font-size: 15px;
 }
 
 #aboutMe_text {
@@ -260,7 +274,7 @@ p {
 
 /*
 	Others
-*/ 
+*/
 
 .fp-slidesNav {
 	text-align: center! important;
@@ -269,16 +283,26 @@ p {
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
 	background: white !important;
 }
-  
+
 
 /*
-  Menu 
+  Menu
 */
 .navbar {
   position: fixed !important;
   top: 20px;
+  padding-left: 100px;
 }
 
 .nav-link {
   color: white !important;
+}
+
+.label-value, .star-container{
+  min-width: 200px;
+  padding-bottom: 10px;
+}
+
+.star {
+padding-right: 25px;
 }
