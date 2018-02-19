@@ -269,3 +269,16 @@ p {
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
 	background: white !important;
 }
+  
+
+/*
+  Menu 
+*/
+.navbar {
+  position: fixed !important;
+  top: 20px;
+}
+
+.nav-link {
+  color: white !important;
+}
