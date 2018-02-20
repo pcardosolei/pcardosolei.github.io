@@ -178,7 +178,7 @@ p {
 	Image resizing
 */
 
-#aboutme_photo , #arredasPhoto_me, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica {
+ #arredasPhoto_me, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica {
   position: absolute;
   margin: auto;
   top: 0;
@@ -187,8 +187,7 @@ p {
   bottom: 0;
 }
 #aboutme_photo {
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 60% !important;
 	border-radius: 10px;
 }
 
