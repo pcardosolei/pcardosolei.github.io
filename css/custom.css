@@ -101,6 +101,11 @@ body p {
   padding-right: 30px;
 }
 
+.go_to_left {
+  float: left;
+}
+
+
 /*
   Others
 */
@@ -160,6 +165,8 @@ p {
 
 .description_p {
   font-size: 15px;
+  text-align: justify !important;
+  text-justify: inter-word !important;
 }
 
 #aboutMe_text {
@@ -190,6 +197,11 @@ p {
 	max-width: 60% !important;
 	border-radius: 10px;
 }
+
+#synergia_bootcamp {
+  max-width: 80% !important;
+  border-radius: 10px;
+  }
 
 #arredasPhoto_me {
   max-width: 100%;
@@ -224,7 +236,10 @@ p {
 #synergia_logo {
    display:block;
    margin:auto;
+   max-width: 65% !important;
 }
+
+
 
 #arredas_logo {
   max-width: 50%;
@@ -247,9 +262,9 @@ p {
 }
 
 @media (max-width: 768px){
-  #aboutme_photo, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica {
-    max-width: 0%;
-    max-height: 0%;
+  #aboutme_photo, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica, #synergia_bootcamp {
+    width: 0px;
+    height: 0px;
   }
 }
 
