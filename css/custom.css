@@ -185,7 +185,7 @@ p {
 	Image resizing
 */
 
- #arredasPhoto_me, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica {
+ #arredasPhoto_me, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica, #pasoImage {
   position: absolute;
   margin: auto;
   top: 0;
@@ -239,7 +239,11 @@ p {
    max-width: 65% !important;
 }
 
-
+#pasoImage {
+  min-height: 10%;
+  max-width: 65%;
+  border-radius: 10px;  
+}
 
 #arredas_logo {
   max-width: 50%;
@@ -262,7 +266,7 @@ p {
 }
 
 @media (max-width: 768px){
-  #aboutme_photo, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica, #synergia_bootcamp {
+  #aboutme_photo, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica, #synergia_bootcamp, #pasoImage {
     width: 0px;
     height: 0px;
   }
