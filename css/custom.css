@@ -252,7 +252,7 @@ p {
 
 #arredas_logo , #arredasPhoto_me, #cesium_me{
   display: block;
-  margin: auto;
+  margl: auto;
 }
 
 #opportunity_photo {
@@ -269,6 +269,23 @@ p {
   #aboutme_photo, #windmillImage, #feedbackImage, #cesium_me , #opportunity_photo, #video_salonica, #synergia_bootcamp, #pasoImage {
     width: 0px;
     height: 0px;
+  }
+
+  .description li {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .padding_top_100 {
+    padding-top: 10px;
+  }
+
+  .padding_left_30 {
+    padding-left: 5px;
+  }
+
+  .padding_right_30 {
+    padding-right: 5px;
   }
 }
 
