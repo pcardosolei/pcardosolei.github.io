@@ -14,21 +14,7 @@ body h1, h2, h3, h4, h5, h6{
 body p {
   font-family: "Trebuchet MS", sans-serif;
 }
-/*
-	Color Schemes
-*/
 
-#intro_1 {}
-
-#intro_2 {}
-
-#intro_3 {}
-
-#intro_4 {}
-
-#intro_5 {}
-
-#intro_6 {}
 /*
  	Position elements in slides
 */
@@ -38,7 +24,6 @@ body p {
  	text-align: center;
  	color: white;
  }
-
 
  .padding_top_35 {
  	padding-top: 35px;
@@ -50,10 +35,6 @@ body p {
 
 .padding_top_25 {
 	padding-top: 25px;
-}
-
-.padding_top_100 {
-	padding-top: 100px;
 }
 
 .padding_top_50 {
@@ -173,10 +154,6 @@ p {
   padding-top: 20px;
 }
 
-/*
-	Color
-*/
-
 .color_white {
 	color: white;
 }
@@ -193,76 +170,23 @@ p {
   right: 0;
   bottom: 0;
 }
-#aboutme_photo {
-	max-width: 60% !important;
+#synergia_bootcamp, #arredasPhoto_me, #windmillImage, #feedbackImage , #cesium_me, #pasoImage, #opportunity_photo, #video_salonica {
+	max-width: 100% !important;
+  max-height: 100% !important;
 	border-radius: 10px;
 }
-
-#synergia_bootcamp {
-  max-width: 80% !important;
-  border-radius: 10px;
-  }
-
-#arredasPhoto_me {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
+#aboutme_photo {
+  max-height: 78vh !important;
+  border-radius: 20px;
 }
 
-#windmillImage {
-  min-height: 75%;
-  max-height: 150%;
-  border-radius: 10px;
-}
-
-#feedbackImage {
-  max-height: 150%;
-  max-width: 150%;
-  border-radius: 10px;
-}
-
-#cesium_me {
-  max-height: 75%;
-  max-width: 75%;
-  border-radius: 10px;
-}
-
-#cesium_logo {
-  max-height: 60%;
-  max-width: 60%;
-  border-radius: 10px;
-}
-
-#synergia_logo {
-   display:block;
-   margin:auto;
-   max-width: 65% !important;
-}
-
-#pasoImage {
-  min-height: 10%;
-  max-width: 65%;
-  border-radius: 10px;  
-}
-
-#arredas_logo {
-  max-width: 50%;
-  max-height: 50%;
+#cesium_logo, #synergia_logo, #arredas_logo{
+  max-width: 50vw !important;
 }
 
 #arredas_logo , #arredasPhoto_me, #cesium_me{
   display: block;
-  margl: auto;
-}
-
-#opportunity_photo {
-	max-height: 150%;
-	max-width: 150%;
-}
-
-#video_salonica {
-	min-height: 100%;
-	max-width: 100%;
+  margin: auto;
 }
 
 @media (max-width: 768px){
@@ -289,7 +213,6 @@ p {
   }
 }
 
-
 /*
   Height , width changes
 */
@@ -306,7 +229,6 @@ p {
   height: 100% !important;
 }
 
-
 /*
 	Others
 */
@@ -318,7 +240,6 @@ p {
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
 	background: white !important;
 }
-
 
 /*
   Menu
