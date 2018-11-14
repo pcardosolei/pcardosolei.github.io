@@ -2,10 +2,23 @@ body {
 	background-color: #111116;
 }
 
+
+/*
+	HORIZONTAL - NAVBAR
+*/ 
+
 #navbar-side {
-	overflow: hidden;
-	border-right: 1px white;
-	min-height: 100vh;
-	position: absolute;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+	max-width: 100px;
+}
+
+.nav-item {
+ 	font-size: 30px;
+}
+
+.nav {
 	text-align: center;
 }
