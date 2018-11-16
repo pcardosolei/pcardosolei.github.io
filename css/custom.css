@@ -10,6 +10,7 @@ body {
 
 #navbar-side {
 	display:flex;
+	position: absolute;
 	justify-content:center;
 	align-items:center;
 	min-height:100vh;
@@ -23,3 +24,39 @@ body {
 .nav {
 	text-align: center;
 }
+
+.fa-smile-beam:hover, .fa-briefcase:hover, .fa-hands-helping:hover, .fa-mobile-alt:hover {
+	color: red;
+}
+
+/*
+	MAIN CONTENT 
+*/
+
+.main-content {
+	display: flex;
+	min-width: 100vw;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-left: 100px;
+	color: white;
+}
+
+#personal_info {
+	display: none;
+}
+
+/*
+	ICONS - CONTACTS
+*/
+
+#logos-contacts {
+	padding-top: 10px;
+}
+
+#logos-contacts a i{
+	padding: 0 7px;
+}
+
