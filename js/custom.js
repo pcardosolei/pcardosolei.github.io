@@ -1,11 +1,15 @@
 $(document).ready(function() {
-	$('#fullpage').fullpage({
-      css3: true,
-      sectionsColor: ['#125485', '#3A2E39', '#6B818C', '#2E86AB', '#191D32', '#0A0908'],
-      controlArrows: false,
-      slidesNavigation: true,
-      menu: '#myMenu',
-      anchors:['Intro','AboutMe','Career','Volunteer','Internacional','Contact'], /* FOR THE MENU WHEN YOU ARE GOING TO PUT IT */
-  });
+    $("#personal-info").click(function(){
+        alert("p-button");
+    }); 
+    $("#work-info").click(function(){
+        alert("w-button");
+    }); 
+    $("#volunteer-info").click(function(){
+        alert("v-button");
+    }); 
+    $("#contact-info").click(function(){
+        alert("button");
+    }); 
 });
 

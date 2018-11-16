@@ -1,6 +1,5 @@
 body {
 	background-color: #111116;
-	overflow: hidden;
 }
 
 
@@ -10,7 +9,7 @@ body {
 
 #navbar-side {
 	display:flex;
-	position: absolute;
+	position: fixed;
 	justify-content:center;
 	align-items:center;
 	min-height:100vh;
@@ -40,13 +39,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding-left: 100px;
+	padding: 0 5vw;
 	color: white;
 }
 
 #personal_info {
 	display: none;
 }
+
 
 /*
 	ICONS - CONTACTS
@@ -60,3 +60,13 @@ body {
 	padding: 0 7px;
 }
 
+/*
+ BREAK-SECTION 
+*/
+
+.break-section {
+	min-width: 90vw;
+	height: 1px;
+	border: 1px white solid;
+	margin: 5px 5vw;
+}
