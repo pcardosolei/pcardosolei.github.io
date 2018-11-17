@@ -70,3 +70,17 @@ body {
 	border: 1px white solid;
 	margin: 5px 5vw;
 }
+
+/* 
+	IMAGES CSS
+*/
+
+.center-images {
+	align-items: center;
+	display: flex;
+}
+
+.logo-additional-detail {
+	background-color: transparent !important;
+	max-width: 50%;
+}
