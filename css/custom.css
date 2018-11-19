@@ -47,7 +47,6 @@ body {
 	display: none;
 }
 
-
 /*
 	ICONS - CONTACTS
 */
@@ -61,7 +60,7 @@ body {
 }
 
 /*
- BREAK-SECTION 
+ 	BREAK-SECTION 
 */
 
 .break-section {
@@ -80,7 +79,63 @@ body {
 	display: flex;
 }
 
-.logo-additional-detail {
-	background-color: transparent !important;
-	max-width: 50%;
+.img-fluid {
+	max-width: 75%;
+	margin: 0 auto;
+}
+
+.logo-img {
+	max-width: 35%;
+}
+
+/* SMALL DEVICES */
+@media only screen and (max-width:320px) {
+	.nav-item {
+		font-size: 20px;
+	}
+
+	.fa-3x { 
+		font-size: 2em !important; 
+	}
+	.main-content {
+		padding: 0 13vw;
+	}
+
+	.img-fluid {
+		max-width: 50%;
+	}
+}
+
+@media only screen and (min-width:321px) and (max-width:768px) {
+	.nav-item {
+		font-size: 20px;
+	}
+
+	.fa-3x { 
+		font-size: 2em !important; 
+	}
+	.main-content {
+		padding: 0 13vw;
+	}
+
+	.img-fluid {
+		max-width: 50%;
+	}	
+}
+
+@media only screen and (min-width:769px) {
+	.nav-item {
+		font-size: 20px;
+	}
+
+	.fa-3x { 
+		font-size: 2em !important; 
+	}
+	.main-content {
+		padding: 0 13vw;
+	}
+
+	.img-fluid {
+		max-width: 50%;
+	}		
 }
