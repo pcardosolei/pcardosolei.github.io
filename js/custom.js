@@ -1,5 +1,4 @@
 /* VARIABLES */
-
 var $contents = $('.main-content');
 
 /* NAV BAR */
@@ -10,6 +9,7 @@ var $workNav = $('#work-href');
 
 
 $(document).ready(function() {
+
 	/* CLICKS */
     $("#personal-info").click(function(){}); 
     $("#work-info").click(function(){}); 
@@ -60,5 +60,10 @@ $(document).ready(function() {
 	}
 });
 
+/* TypeIt */
 
-
+new TypeIt('#typeit-p', {
+    strings: ["<h1>Hello !!</h1>","My name is <strong>Paulo</strong>","I'm a software developer","I also do volunteering","And I inspire youth to be better","Let's be in touch?"],
+    autoStart: false,
+    repeat: true
+});
