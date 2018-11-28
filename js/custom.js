@@ -11,11 +11,15 @@ var $workNav = $('#work-href');
 $(document).ready(function() {
 
 	/* CLICKS */
-    $("#personal-info").click(function(){}); 
-    $("#work-info").click(function(){}); 
-    $("#volunteer-info").click(function(){}); 
-    $("#contact-info").click(function(){}); 
-	
+    $("a[href^='#']").click(function(e) {
+		e.preventDefault();
+		
+		var position = $($(this).attr("href")).offset().top;
+
+		$("body, html").animate({
+			scrollTop: position
+		} /* speed */ );
+	});
 	/* SCROLL */
 	$(window).scroll(check_if_in_view);
 
@@ -63,7 +67,7 @@ $(document).ready(function() {
 /* TypeIt */
 
 new TypeIt('#typeit-p', {
-    strings: ["<h1>Hello !!</h1>","My name is <strong>Paulo</strong>","I'm a software developer","I also do volunteering","And I inspire youth to be better","Let's be in touch?"],
+    strings: ["<h1>Hello !!</h1>","I'm <strong>Paulo</strong>","Software developer","Volunteer","And I inspire youth to be better","Wanna work together?"],
     autoStart: false,
     repeat: true
 });
