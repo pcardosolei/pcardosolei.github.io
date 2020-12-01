@@ -1,40 +1,80 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset=utf-8>
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-			canvas { width: 100%; height: 100% }
-		</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<title>Paulo</title>
 	</head>
 	<body>
-		<script src="js/three.js"></script>
-		<script>
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    <section class="container">
+      <h1>Career</h1>
+      <div>
+        <div>Jumpseller</div>
+        <p>Working in Jumpseller core application.
+          Focus on back end technology and overall development processes.
+          
+          Technologies:
+          <ul>
+            <li>BackEnd: Ruby, Rails / Padrino</li>
+            <li>FrontEnd: React</li>
+            <li>VersionControl: Git / Gitlab</li>
+            <li>Tools: Docker, Rubocop, Eslint</li>
+            <li>Tests: Rspec</li>
+          </ul>
+        </p>
+      </div>
 
-      var renderer = new THREE.WebGLRenderer();
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      document.body.appendChild( renderer.domElement );
+      <div>
+        <div>BindTuning</div>
+        <p>Development of the Provisioning tool (desktop and web) that provides Sharepoint administrators an easy way to deliver intranets everywhere.
 
-      // cube
+          Technologies:
+          
+          <ul>
+            <li>Electron framework</li>
+            <li>Javascript</li>
+            <li>JQuery</li>
+            <li>.NET</li>
+            <li>Powershell</li>
+            <li>Angular 8</li>
+          </ul>
+          
+          Testing Tools: Mocha, Chai, Chai as Promised, Spectron ( WebDriver IO)
+          Azure Functions</p>
+      </div>
+      <div>
+        <div>ParadigmaXis</div>
+        <p>Six months contract between 22 of April and 22 October.
 
-      var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-      var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-      var cube = new THREE.Mesh( geometry, material );
-      scene.add( cube );
-
-      camera.position.z = 5;
-
-
-      function animate() {
-          requestAnimationFrame( animate );
-          renderer.render( scene, camera );
-          cube.rotation.x += 0.01;
-          cube.rotation.y += 0.01;
-        }
-        animate();
-		</script>
+          Worked on a core project for the Municipality of Porto related with maps.
+          
+          Technologies:
+          <ul>
+            <li>Angular 4+</li>
+            <li>D3.js</li>
+            <li>Docker</li>
+            <li>Spring</li>
+            <li>Postgresql</li>
+            <li>Leaflet</li>
+            <li>GeoTools</li>
+            <li>Javascript</li>
+            <li>Shapefile</li>
+            <li>PostGis</li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <div>Freelancing</div>
+      </div>
+    </section>
+    <section class="container">
+      <h1>Volunteering</h1>
+      <div></div>
+    </section>
+    <section class="container">
+      <h1>Education</h1>
+      <div>
+        <div></div>
+      </div>
+    </section>
 	</body>
 </html>
