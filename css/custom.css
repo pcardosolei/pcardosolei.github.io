@@ -1,3 +1,9 @@
 #achivements > .row  i {
     color: green;
 }
+
+/* while I work on this */
+svg {
+    height: 64px;
+    width: auto;
+}
