@@ -3,7 +3,8 @@
 }
 
 /* while I work on this */
-svg {
+#icons svg,
+#icons img {
     height: 64px;
     width: auto;
 }
