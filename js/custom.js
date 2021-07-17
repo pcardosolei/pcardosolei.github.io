@@ -80,16 +80,16 @@ d3.json("https://raw.githubusercontent.com/pcardosolei/pcardosolei.github.io/mas
       .attr("fill", "white")
 
   // Add title for the 3 groups
-  svg
-    .selectAll("titles")
-    .data(root.descendants().filter(function(d){return d.depth==1}))
-    .enter()
-    .append("text")
-      .attr("x", function(d){ return d.x0})
-      .attr("y", function(d){ return d.y0+21})
-      .text(function(d){ return d.data.name })
-      .attr("font-size", "19px")
-      .attr("fill",  function(d){ return color(d.data.name)} )
+//   svg
+//     .selectAll("titles")
+//     .data(root.descendants().filter(function(d){return d.depth==1}))
+//     .enter()
+//     .append("text")
+//       .attr("x", function(d){ return d.x0})
+//       .attr("y", function(d){ return d.y0+21})
+//       .text(function(d){ return d.data.name })
+//       .attr("font-size", "19px")
+//       .attr("fill",  function(d){ return color(d.data.name)} )
 
   // Add title for the 3 groups
   svg
