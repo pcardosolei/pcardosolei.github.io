@@ -1,121 +1,59 @@
-window.onload = async function(){
+window.onload = function() {
+    // set the dimensions and margins of the graph
+var width = 450
+    height = 450
+    margin = 40
 
-// set the dimensions and margins of the graph
-var margin = {top: 10, right: 50, bottom: 10, left: 50},
-  width = window.innerWidth - margin.left - margin.right,
-  height = 800 - margin.top - margin.bottom;
+// The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
+var radius = Math.min(width, height) / 2 - margin
 
-// append the svg object to the body of the page
+// append the svg object to the div called 'my_dataviz'
 var svg = d3.select("#my_dataviz")
-.append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-.append("g")
-  .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+  .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-        
-
-// Read data
 d3.json("https://raw.githubusercontent.com/pcardosolei/pcardosolei.github.io/master/info.json", function(data) {
-  // Give the data to this cluster layout:
-  var root = d3.hierarchy(data).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
 
-  // Then d3.treemap computes the position of each element of the hierarchy
-  d3.treemap()
-    .size([width, height])
-    .paddingTop(28)
-    .paddingRight(7)
-    .paddingInner(3)      // Padding between each rectangle
-    //.paddingOuter(6)
-    //.padding(20)
-    (root)
+// set the color scale
+var color = d3.scaleOrdinal()
+  .domain(data)
+  .range(d3.schemeSet2);
 
-  // prepare a color scale
-  var color = d3.scaleOrdinal()
-    .domain(["boss1", "boss2", "boss3"])
-    .range([ "#402D54", "#D18975", "#8FD175"])
+// Compute the position of each group on the pie:
+var pie = d3.pie()
+  .value(function(d) {return d.value; })
+var data_ready = pie(d3.entries(data))
+// Now I know that group A goes from 0 degrees to x degrees and so on.
 
-  // And a opacity scale
-  var opacity = d3.scaleLinear()
-    .domain([10, 30])
-    .range([.5,1])
+// shape helper to build arcs:
+var arcGenerator = d3.arc()
+  .innerRadius(0)
+  .outerRadius(radius)
 
-  // use this information to add rectangles:
-  svg
-    .selectAll("rect")
-    .data(root.leaves())
-    .enter()
-    .append("rect")
-      .attr('x', function (d) { return d.x0; })
-      .attr('y', function (d) { return d.y0; })
-      .attr('width', function (d) { return d.x1 - d.x0; })
-      .attr('height', function (d) { return d.y1 - d.y0; })
-      .style("stroke", "black")
-      .style("fill", function(d){ return color(d.parent.data.name)} )
-      .style("opacity", function(d){ return opacity(d.data.value)})
+// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+svg
+  .selectAll('mySlices')
+  .data(data_ready)
+  .enter()
+  .append('path')
+    .attr('d', arcGenerator)
+    .attr('fill', function(d){ return(color(d.data.key)) })
+    .attr("stroke", "black")
+    .style("stroke-width", "2px")
+    .style("opacity", 0.7)
 
-  // and to add the text labels
-  svg
-    .selectAll("text")
-    .data(root.leaves())
-    .enter()
-    .append("text")
-      .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
-      .attr("y", function(d){ return d.y0+20})    // +20 to adjust position (lower)
-      .text(function(d){ return d.data.name.replace('mister_','') })
-      .attr("font-size", "19px")
-      .attr("fill", "white")
-
-  // and to add the text labels
-  svg
-    .selectAll("vals")
-    .data(root.leaves())
-    .enter()
-    .append("text")
-      .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
-      .attr("y", function(d){ return d.y0+35})    // +20 to adjust position (lower)
-      .text(function(d){ return d.data.value })
-      .attr("font-size", "11px")
-      .attr("fill", "white")
-
-  // Add title for the 3 groups
-//   svg
-//     .selectAll("titles")
-//     .data(root.descendants().filter(function(d){return d.depth==1}))
-//     .enter()
-//     .append("text")
-//       .attr("x", function(d){ return d.x0})
-//       .attr("y", function(d){ return d.y0+21})
-//       .text(function(d){ return d.data.name })
-//       .attr("font-size", "19px")
-//       .attr("fill",  function(d){ return color(d.data.name)} )
-
-  // Add title for the 3 groups
-  svg
-    .append("text")
-      .attr("x", 0)
-      .attr("y", 14)    // +20 to adjust position (lower)
-      .text("Three group leaders and 14 employees")
-      .attr("font-size", "19px")
-      .attr("fill",  "grey" )
-
-})
-}
-
-function loadJSON(callback) {
-
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'info.json', true);
-    xobj.onreadystatechange = function() {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-
-            // .open will NOT return a value but simply returns undefined in async mode so use a callback
-            callback(xobj.responseText);
-
-        }
-    }
-    xobj.send(null);
-
+// Now add the annotation. Use the centroid method to get the best coordinates
+svg
+  .selectAll('mySlices')
+  .data(data_ready)
+  .enter()
+  .append('text')
+  .text(function(d){ return "grp " + d.data.key})
+  .attr("transform", function(d) { return "translate(" + arcGenerator.centroid(d) + ")";  })
+  .style("text-anchor", "middle")
+  .style("font-size", 17)
+});
 }
