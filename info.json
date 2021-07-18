@@ -1,8 +1,12 @@
 {
-    "BITCOIN": 0.5, 
-    "ETH": 0.2, 
-    "ADA": 0.1,
-    "AAPL - APPLE": 0.1,
-    "WORLD ETF - VWCE / VWRL": 0.1,
-    "TSLA - TESLA": 0.1
+    "CASH": 0.53,
+    "BITCOIN": 0.17, 
+    "ETH": 0.1, 
+    "OTHER ALTCOINS": 0.06,
+    "APPLE": 0.04,
+    "OTHER STOCKS": 0.03,
+    "SXR8": 0.02,
+    "TSLA": 0.02,
+    "KO": 0.02,
+    "VWCE / VWRL": 0.1
 }

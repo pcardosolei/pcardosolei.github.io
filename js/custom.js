@@ -1,7 +1,7 @@
 window.onload = function() {
     // set the dimensions and margins of the graph
-var width = 450
-    height = 450
+var width = window.innerWidth / 2
+    height = window.innerWidth / 2
     margin = 40
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
@@ -51,7 +51,7 @@ svg
   .data(data_ready)
   .enter()
   .append('text')
-  .text(function(d){ return "grp " + d.data.key})
+  .text(function(d){ return d.data.key})
   .attr("transform", function(d) { return "translate(" + arcGenerator.centroid(d) + ")";  })
   .style("text-anchor", "middle")
   .style("font-size", 17)
