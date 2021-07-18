@@ -1,8 +1,8 @@
 window.onload = function() {
     // set the dimensions and margins of the graph
-var width = window.innerWidth / 2
-    height = window.innerWidth / 2
-    margin = 40
+var width = window.innerWidth * 0.9
+    height = window.innerWidth * 0.5
+    margin = 80
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
 var radius = Math.min(width, height) / 2 - margin
@@ -52,8 +52,10 @@ svg
   .enter()
   .append('text')
   .text(function(d){ return d.data.key})
-  .attr("transform", function(d) { return "translate(" + arcGenerator.centroid(d) + ")";  })
+  .attr("transform", function(d) { 
+    var c = arcGenerator.centroid(d);
+    return "translate(" + c[0]*2.2 +"," + c[1]*2.2 + ")";  })
   .style("text-anchor", "middle")
-  .style("font-size", 17)
+  .style("font-size", 12)
 });
 }
